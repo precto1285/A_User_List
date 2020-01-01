@@ -1,12 +1,16 @@
 const http = new userHTTP;
 
 // Add Event Listener for show button
-const showButton = document.querySelector("#showusers");
-showButton.addEventListener('click', showTable)
+const showButton = document.querySelector("#showusers").addEventListener('click', showTable)
+
+// Get Values from Input Form
+const userID = document.getElementById("newUserId");
+const userName = document.getElementById("newUserName");
+const userUserName = document.getElementById("newUserUsername");
+const userEmail = document.getElementById("newUserEmail");
 
 // Add Event Listener for Submit User Button
-const submitUser = document.querySelector("#submit");
-submitUser.addEventListener('click', addUser);
+const submitUser = document.querySelector("#submit").addEventListener('click', addUser);
 
 // Function to show table
 function showTable(e) {
@@ -60,7 +64,17 @@ function showTable(e) {
   e.preventDefault();
 };
 
+// Add user function
 function addUser(e) {
-  console.log("I got Clicked")
+  console.log(userID.value, userName.value, userUserName.value, userEmail.value)
+  clearForm();
   e.preventDefault();
+}
+
+// Function to clear input form
+function clearForm() {
+  userID.value = '';
+  userName.value = '';
+  userUserName.value = '';
+  userEmail.value = '';
 }
