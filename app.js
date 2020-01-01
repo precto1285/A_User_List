@@ -1,8 +1,12 @@
 const http = new userHTTP;
 
-// Add Event Listern for button
-const button = document.querySelector("#showusers");
-button.addEventListener('click', showTable)
+// Add Event Listener for show button
+const showButton = document.querySelector("#showusers");
+showButton.addEventListener('click', showTable)
+
+// Add Event Listener for Submit User Button
+const submitUser = document.querySelector("#submit");
+submitUser.addEventListener('click', addUser);
 
 // Function to show table
 function showTable(e) {
@@ -47,12 +51,16 @@ function showTable(e) {
     })
   }
 
-  // Disable Button after it has been clicked to prevent duplicating show list
+  // Disable Show Button after it has been clicked to prevent duplicating show list
   function disableButton() {
-    document.querySelector('.btn').disabled = true;
+    document.querySelector('#showusers').disabled = true;
   }
   disableButton();
 
   e.preventDefault();
 };
 
+function addUser(e) {
+  console.log("I got Clicked")
+  e.preventDefault();
+}
