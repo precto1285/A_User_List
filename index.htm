@@ -17,7 +17,23 @@
   <div class="container">
     <div class="jumbotron mb-4 py-5 bg-info text-white text-center">
       <h1 class="mb-4">User List: </h1>
-      <button class="btn btn-danger text-white">See List</button>
+      <button id="showusers" class="btn btn-danger text-white">See List</button>
+    </div>
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>Add User</h4>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <input type="number" class="form-control mb-1" id="newUserId" placeholder="Identification Number">
+            <input type="text" class="form-control mb-1" id="newUserName" placeholder="Name">
+            <input type="text" class="form-control mb-1" id="newUserUsername" placeholder="Username">
+            <input type="email" class="form-control mb-1" id="newUserEmail" placeholder="Email">
+            <button id="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="card p-3">
       <table class="table table-striped">
