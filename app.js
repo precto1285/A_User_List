@@ -1,7 +1,10 @@
 const http = new userHTTP;
 
 // Add Event Listener for show button
-const showButton = document.querySelector("#showusers").addEventListener('click', showTable)
+const showButton = document.querySelector("#showusers").addEventListener('click', showTable);
+
+// get Element Target from index.htm
+const target = document.getElementById('target');
 
 // Get Values from Input Form
 const userID = document.getElementById("newUserId");
@@ -22,9 +25,6 @@ function showTable(e) {
   function tableBody(data) {
     // Loop through data
     data.forEach(user => {
-      // get Element Target from index.htm
-      const target = document.getElementById('target');
-
       // Create Elements
       const tr = document.createElement('tr');
       let td_id = document.createElement('td');
@@ -66,8 +66,14 @@ function showTable(e) {
 
 // Add user function
 function addUser(e) {
+  // Create User
+  http.post('https://jsonplaceholder.typicode.com/users', data).then(data => console.log(data)).catch(err => console.log(err));
+
+
   console.log(userID.value, userName.value, userUserName.value, userEmail.value)
+
   clearForm();
+
   e.preventDefault();
 }
 
