@@ -5,4 +5,10 @@ http.get('https://jsonplaceholder.typicode.com/users').then(data => console.log(
 
 // Add Event Listern for button
 const button = document.querySelector(".btn");
-button.addEventListener('click', (e) => { console.log('clicked'); e.preventDefault(); })
+button.addEventListener('click', showTable)
+
+// Created Function to show table
+function showTable(e) {
+  console.log('Button was clicked');
+  e.preventDefault();
+};
