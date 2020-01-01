@@ -1,7 +1,5 @@
 const http = new userHTTP;
 
-
-
 // Add Event Listern for button
 const button = document.querySelector(".btn");
 button.addEventListener('click', showTable)
