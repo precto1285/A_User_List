@@ -23,7 +23,7 @@
       <div class="card-header">
         <h4>Add User</h4>
       </div>
-      <div class="card-body">
+      <h4 class="card-body">
         <form>
           <div class="form-group">
             <input type="number" class="form-control mb-1" id="newUserId" placeholder="Identification Number">
@@ -33,21 +33,22 @@
             <button id="submit" class="btn btn-primary btn-block">Submit</button>
           </div>
         </form>
-      </div>
+        <center><span id="errorMsg" class="text-danger"></span></center>
     </div>
-    <div class="card p-3">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">ID#</th>
-            <th scope="col">NAME</th>
-            <th scope="col">USERNAME</th>
-            <th scope="col">EMAIL</th>
-          </tr>
-        </thead>
-        <tbody id="target"></tbody>
-      </table>
-    </div>
+  </div>
+  <div class="card p-3">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID#</th>
+          <th scope="col">NAME</th>
+          <th scope="col">USERNAME</th>
+          <th scope="col">EMAIL</th>
+        </tr>
+      </thead>
+      <tbody id="target"></tbody>
+    </table>
+  </div>
   </div>
 
   <!-- Optional JavaScript -->

@@ -67,10 +67,19 @@ function showTable(e) {
 // Add user function
 function addUser(e) {
   // Create User
-  http.post('https://jsonplaceholder.typicode.com/users', data).then(data => console.log(data)).catch(err => console.log(err));
+  // http.post('https://jsonplaceholder.typicode.com/users', data).then(data => console.log(data)).catch(err => console.log(err));
 
+  if (userID.value === "" || userName.value === "" || userUserName.value === "" || userEmail.value === "") {
+    var errorMessage = document.getElementById('errorMsg');
+    errorMessage.innerHTML = "Please input data";
+    setTimeout(() => {
+      errorMessage.innerHTML = "";
+    }, 2000);
+    console.log('please add data');
+  } else {
+    console.log(userID.value, userName.value, userUserName.value, userEmail.value)
 
-  console.log(userID.value, userName.value, userUserName.value, userEmail.value)
+  }
 
   clearForm();
 
