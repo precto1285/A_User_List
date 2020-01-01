@@ -49,6 +49,11 @@ function showTable(e) {
     })
   }
 
+  // Disable Button after it has been clicked to prevent duplicating show list
+  function disableButton() {
+    document.querySelector('.btn').disabled = true;
+  }
+  disableButton();
 
   e.preventDefault();
 };
